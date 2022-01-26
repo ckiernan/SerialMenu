@@ -21,7 +21,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 #define DEMOCOPYRIGHT "SerialMenu demo2 - Copyright (c) 2019 Dan Truong"
 
-#include <SerialMenu.hpp>
+#include "SerialMenu.hpp"
 const SerialMenu& menu = SerialMenu::get();
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -76,8 +76,8 @@ const SerialMenuEntry subMenu[] = {
   {subMenuStr4, true, 'u', [](){ Serial.println(++value); }},
   {subMenuStr5, true, 'b', foo},
   {subMenuStr6, true, 'c', foo},
-  {subMenuStr7, true, 'f', foo},
-  {subMenuStr8, false,'t', foo},
+  {subMenuStr7, true, 'f', foo},R
+  {subMenuStr8, false,'t', foo},R
   {subMenuStr9, false,'I',
     [](){ value = menu.getNumber<float>("Input floating point: "); }},
   {"M - Menu",  false, 'm',
